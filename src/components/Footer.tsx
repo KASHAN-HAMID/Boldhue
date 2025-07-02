@@ -59,11 +59,7 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <img 
-                src="/lovable-uploads/9aca952c-8894-4ada-8d02-ecc090654a06.png" 
-                alt="BoldHue" 
-                className="h-12 w-auto mb-6 transition-all duration-300"
-              />
+             
               <p className="text-muted-foreground mb-8 max-w-md leading-relaxed font-inter">
                 BoldHue creates innovative digital experiences through cutting-edge web development, 
                 graphic design, and UI/UX solutions that define and elevate your brand.
