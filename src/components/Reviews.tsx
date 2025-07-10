@@ -34,7 +34,7 @@ const reviews = [
   },
   {
     name: '',
-    position: 'CTO, DataFlow Solutions',
+    position: '',
     image:
       'IMG-20250703-WA0025.jpg',
     rating: 5,
