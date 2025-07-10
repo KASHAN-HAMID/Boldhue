@@ -8,14 +8,12 @@ import { useState, useEffect } from 'react';
 
 const reviews = [
   {
-    name: 'The Vision Consultants',
-    position: '',
-    image: '/IMG-20250703-WA0022.jpg',
-    rating: 5,
-    review:
-      
-' "We've been impressed by the creativity and professionalism of their design work. They truly understand our brand's vision and have helped us convey it effectively to our audience','
-  },
+  name: 'The Vision Consultants',
+  position: '',
+  image: '/IMG-20250703-WA0022.jpg',
+  rating: 5,
+  review: `We've been impressed by the creativity and professionalism of their design work. They truly understand our brand's vision and have helped us convey it effectively to our audience.`,
+},
   {
     name: 'Study Time Consultants',
     position: '',
