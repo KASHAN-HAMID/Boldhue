@@ -2,16 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import dynamic from 'next/dynamic';
-
-const ThreeBackground = dynamic(() => import('./ThreeBackground'), { ssr: false });
 
 const Hero = () => {
-  const [showThreeBg, setShowThreeBg] = useState(false);
+  const [ThreeBackground, setThreeBackground] = useState<React.ComponentType | null>(null);
 
   useEffect(() => {
-    if (window.innerWidth >= 1024) {
-      setShowThreeBg(true);
+    if (typeof window !== 'undefined' && window.innerWidth >= 1024) {
+      import('./ThreeBackground').then((mod) => {
+        setThreeBackground(() => mod.default);
+      });
     }
   }, []);
 
@@ -27,8 +26,8 @@ const Hero = () => {
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden pt-32"
     >
-      {/* Only render ThreeBackground client-side when screen is large */}
-      {showThreeBg && <ThreeBackground />}
+      {/* Render ThreeBackground only after loading on client */}
+      {ThreeBackground && <ThreeBackground />}
 
       {/* Background Blobs */}
       <div className="absolute inset-0 -z-10 pointer-events-none">
